@@ -5,19 +5,15 @@ fn main() {
     let mut angle;
     let mut x;
     let mut y;
+    let l = vec![0., -20., 40., -60., 80.];
     
-    for i in 0..20 {
-        unko = 0.1 * (i as f32);
+    for i in 0..5 {
+        unko = 0.1 * (l[i] as f32);
         angle = unko * f32::consts::PI;
         x = angle.sin();
         y = angle.cos();
         println!("[{:.1}π]", unko);
         println!("x: {:.2}", x);
-        if x < 0. {
-            println!("y: {:.2}\n", (x.abs()-1.0));
-        } else {
-            println!("y: {:.2}\n", (1.0-x.abs()));
-        }
-        // println!("y: {:.2}\n", y);
+        println!("y: {:.2}\n", y);
     }
 }
