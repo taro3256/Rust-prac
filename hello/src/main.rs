@@ -5,7 +5,7 @@ fn main() {
     let mut angle;
     let mut x;
     let mut y;
-    let l = vec![0., -20., 40., -60., 80.];
+    let l = vec![0., -3., 6., 9., 12.];
     
     for i in 0..5 {
         unko = 0.1 * (l[i] as f32);
@@ -13,7 +13,7 @@ fn main() {
         x = angle.sin();
         y = angle.cos();
         println!("[{:.1}π]", unko);
-        println!("x: {:.2}", x);
-        println!("y: {:.2}\n", y);
+        println!("x: {:.4}", x);
+        println!("y: {:.4}\n", y);
     }
 }
